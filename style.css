@@ -37,7 +37,8 @@ header p , footer p{
     padding: 19px 18px 19px 18px;
     border-radius: 5px;
     font-family: "Montserrat";
-    font-weight: 700;	
+    font-weight: 700;
+    margin-bottom: 15px;
 }
 .header-english{
 	height: 20px;	
@@ -575,12 +576,11 @@ footer{
 	position: fixed;
 	height: 100%;
 	z-index: 3;
-	width: 40%;
+	width: 20%;
 	display: flex;
 }
-.fon p{
-	height: 90px;
-	margin-top: 15px;
+.hader{
+	height: 20px;
 }
 .header-english{
 	margin-top: 15px;
@@ -790,6 +790,7 @@ textarea {
 .menu-contacts h1{
 	font-size: 14px;
 }
+
 @media screen and (max-width:1657px){
 	.cars{
 		width: 600px;
@@ -959,8 +960,8 @@ textarea {
 	.coment-input{
 		grid-template-columns: repeat(1,4fr);
 	}
-	.coment-close{
-
+	.menu{
+		width: 100%;
 	}
 }
 @media screen and (max-width:672px){
@@ -1254,10 +1255,13 @@ textarea {
 		width: 355px;
 	}
 	.pl{
-		width: 340px;
+		width: 360px;
 	}
 	.bc{
 		width: 330px;
+	}
+	.line-1{
+		padding-left: 0;
 	}
 	.d-f1{
 		width: 311px;
@@ -1268,6 +1272,12 @@ textarea {
 	.info-get{
 		padding-left: 50px;
 		padding-right: 50px;
+	}
+	.calums{
+		width: 360px;
+	}
+	li img{
+		display: none;
 	}
 }
 @media screen and (max-width:412px){
