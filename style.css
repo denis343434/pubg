@@ -28,7 +28,6 @@ header p , footer p{
 	background: linear-gradient(151.45deg, rgb(26, 71, 234) 2.599%,rgb(130, 233, 255) 96.172%);
 }
 .dropbtn {
-    padding: 5px;
     cursor: pointer;
 }
 .dropdown {
@@ -48,6 +47,11 @@ header p , footer p{
     background-color: #f9f9f9;
     width:70px;
     position: absolute;
+    left: 0;
+    padding: 19px 15px;
+    padding-top: 5px;
+    padding-left: 16px;
+    border-radius: 5px;
 }
 .dropbtn
 {
@@ -574,6 +578,13 @@ footer{
 	width: 40%;
 	display: flex;
 }
+.fon p{
+	height: 90px;
+	margin-top: 15px;
+}
+.header-english{
+	margin-top: 15px;
+}
 .d-n{
 	display: none;
 }
@@ -588,6 +599,49 @@ footer{
 }
 .close img{
 	width: 60px;
+}
+.coment p{
+	font-size: 30px;
+	font-weight: 700;
+	padding-bottom: 30px;
+}
+.coment{
+	margin-bottom: 30px;
+}
+.coment-input button{
+	border: 0px;
+	border-radius: 5px;
+    box-shadow: 0px 20px 35px 0px rgba(0, 0, 0, 0.08);
+    background: linear-gradient(157.13deg, rgb(255, 155, 5) 11.849%, rgb(255, 143, 63) 109.616%);
+    border: 0px;
+    padding: 17px 26px;
+    color: #fff;
+    font-size: 18px;
+    font-weight: 600;
+}
+input:focus , textarea:focus{
+	outline: none;
+}
+.coment-input input{
+	border: 0px;
+	border-radius: 5px;
+    box-shadow: 0px 15px 25px 0px rgba(0, 0, 0, 0.03);
+    background-color: rgb(245, 249, 255);
+    padding: 10px 20px;
+    font-size: 17px;
+}
+.coment-input{
+	grid-gap: 90px;
+	display: flex;
+	justify-content: center;
+	padding-top: 30px;
+	padding-bottom: 30px;
+}
+.coment{
+	text-align: center;
+	border-radius: 5px;
+    box-shadow: 0px 15px 25px 0px rgba(0, 0, 0, 0.03);
+    background: rgb(255, 255, 255);
 }
 .close{
 	padding-left: 200px;
@@ -662,10 +716,79 @@ textarea {
 	display: grid;
 	justify-content: center;
 }
+.input-com textarea{
+	background-color: rgb(245, 249, 255);
+	width: 90%;
+	height: 30%;
+	padding: 10px;	
+}
 .jcc01 h6{
 	color: #fff;
 	font-size: 17px;
 	font-weight: 400;
+}
+.com-active{
+	position: fixed;
+	width: 600px;
+	top: 35%;
+	left: 33%;	
+	text-align: center;
+    border-radius: 5px;
+    box-shadow: 0px 15px 25px 0px rgba(0, 0, 0, 0.03);
+    background: rgb(255, 255, 255);
+    padding: 48px 10px;
+}
+.fon-blur{
+	animation: fadeInAnimation 0.5s ease-in forwards;
+}
+
+.com-active p{
+	font-size: 25px;
+	font-weight: 600;	
+}
+.coment-close{
+	width: 30px;	
+	height: 30px;
+	position: absolute;
+	top: 20px;
+	right: 20px;
+}
+.coment-logo{
+	width: 200px;
+}
+.menu-contacts{
+	position: fixed;
+	width: 400px;
+	left: 9px;
+	top: 90px;
+	z-index: 9;
+    border-radius: 5px;
+    box-shadow: 0px 15px 25px 0px rgba(0, 0, 0, 0.03);
+    background: rgb(255, 255, 255);
+    padding: 24px 90px;
+    text-align: center;
+    left: 35%;
+    top: 35%;
+}
+.pr{
+	position: relative;
+}
+.logo-menu{
+	width: 200px;
+}
+.close-menu-contacts{
+	width: 60px;
+	position: absolute;
+	top: 20px;
+	right: 20px;
+}
+.menu-contacts p{
+	font-weight: 600;
+	padding-top: 10px;
+	padding-bottom: 10px;
+}
+.menu-contacts h1{
+	font-size: 14px;
 }
 @media screen and (max-width:1657px){
 	.cars{
@@ -683,9 +806,20 @@ textarea {
 		width:350px;
 	}
 }
-@media screen and (max-width:1378px){
+@media screen and (max-width:1478px){
 	footer , header{
 		grid-gap: 30px;
+	}
+	.coment-input{
+		grid-gap: 30px;
+		grid-template-columns: repeat(2,2fr);
+		display: grid;
+		padding-left: 45px;
+		padding-right: 45px;
+	}
+	.com-active{
+		left: 29%;
+		top: 30%;
 	}
 }
 @media screen and (max-width:1331px){
@@ -730,6 +864,12 @@ textarea {
 	.img-contacts{
 		display: none;
 	}
+	.com-active{
+		left: 21%;
+	}
+	.menu-contacts{
+		left: 25%;
+	}
 	header button{
 		display: none;
 	}
@@ -752,10 +892,16 @@ textarea {
 		width: 700px;
 		position: absolute;
 	}
+	.com-active{
+		left: 18%;
+	}
 }
 @media screen and (max-width:919px){
 	.bc{
 		margin-left: 40px;	
+	}
+	.menu-contacts{
+		left: 18%;
 	}
 }
 @media screen and (max-width:849px){
@@ -765,12 +911,24 @@ textarea {
 	.questions-carta-title1{
 		width: 500px;	
 	}
+	.com-active{
+		left: 14%;
+	}
 }
-@media screen and (max-width:728px){
+@media screen and (max-width:781px){
+	.com-active{
+		left: 10%;
+	}
 }
 @media screen and (max-width:728px){
 	.car{
 		display: none;	
+	}
+	.menu-contacts{
+		left: 10%;
+	}
+	.com-active{
+		left: 6%;
 	}
 }
 @media screen and (max-width:672px){
@@ -778,11 +936,31 @@ textarea {
 		width: 400px;
 		margin-top: 120px;	
 	}
+	.com-active{
+		left: 4%;
+	}
 	.questions-carta-title1{
 		width: 330px;	
 	}
 	.d-f1{
 		width: 383px;
+	}
+	.com-active{
+		left: 3%;
+		width: 90%;
+	}
+	.menu-contacts{
+		left: 13%;
+		width: 300px;
+	}
+	.coment{
+		width: 400px;
+	}
+	.coment-input{
+		grid-template-columns: repeat(1,4fr);
+	}
+	.coment-close{
+
 	}
 }
 @media screen and (max-width:672px){
@@ -819,9 +997,20 @@ textarea {
 	.text h1{
 		font-size: 30px;
 	}
+	.text p{
+		padding-top: 90px;
+	}
 	.buton-text{
 		display: grid;	
 		grid-gap: 30px;	
+	}
+	.menu-contacts{
+		left: 2%;
+		width: 230px;
+	}
+	.com-active{
+		width: 87%;
+		left: 4%;
 	}
 	.text{
 		padding-left: 20px;	
@@ -948,11 +1137,17 @@ textarea {
 	.text-hrader{
 		width: 390px;	
 	}
+	.menu-contacts{
+		width: 220px;
+	}
 	.text{
 		padding-right: 0;	
 	}
+	.close{
+		padding-left: 140px;
+	}
 	.carta-nombor{
-		width: 413px;
+		width: 410px;
 	}
 	.bc{
 		width: 370px;
@@ -966,10 +1161,22 @@ textarea {
 	.text{
 		padding-right: 0;	
 	}
+	.text p{
+		padding-top: 90px;
+	}
+	.com-active{
+		left: 3.9%;
+	}
+	.coment{
+		width: 380px;
+	}
 	header{
 		width: 360px;
 		padding-left: 20px;
 		padding-top: 12px;	
+	}
+	.menu-contacts{
+		width: 190px;
 	}
 	.bc{
 		width: 370px;	
@@ -1020,16 +1227,31 @@ textarea {
 	.text-hrader{
 		width: 360px;	
 	}
+	.coment{
+		width: 369px;
+	}
+	.menu-contacts{
+		padding-left: 20px;
+		padding-right: 20px;
+		width: 250px;
+		left: 12%;
+	}
 	header{
 		width: 350px;	
 	}
 	.bc{
 		margin-left: 0;
 	}
+	.close{
+		padding-left: 140px;
+	}
 }
 @media screen and (max-width:360px){
 	header{
 		width: 330px;
+	}
+	.coment{
+		width: 355px;
 	}
 	.pl{
 		width: 340px;
@@ -1046,5 +1268,10 @@ textarea {
 	.info-get{
 		padding-left: 50px;
 		padding-right: 50px;
+	}
+}
+@media screen and (max-width:412px){
+	.close{
+		padding-left: 140px;
 	}
 }
